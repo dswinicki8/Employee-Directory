@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class EmployeeList extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export default function employeeList() {
+  return (
+    <div>
+      
+    </div>
+  )
 }
-
-export default EmployeeList

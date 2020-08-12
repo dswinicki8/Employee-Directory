@@ -1,17 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
+import Nav from "./components/nav";
+import SearchEmployee from './components/searchEmployee';
 import "./App.css";
 
 function App() {
   return (
     <div>
       <Nav>
-        <EmployeeList>
-          <Employee></Employee>
-        </EmployeeList>
-        <Search>
-          <SearchResult></SearchResult>
-        </Search>
+
+       <SearchEmployee/>
       </Nav>
     </div>
   );

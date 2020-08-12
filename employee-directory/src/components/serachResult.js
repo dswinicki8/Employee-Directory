@@ -1,30 +1,22 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export class serachResult extends Component {
-  state = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    jobTitle: "",
-    yearsWithCompany: "",
-  };
 
-  handle;
-
-  render() {
-    return (
-      <div>
-        <ListGroup horizontal>
-          <ListGroup.Item>{this.state.firstName}</ListGroup.Item>
-          <ListGroup.Item>{this.state.lastName}</ListGroup.Item>
-          <ListGroup.Item>{this.state.email}</ListGroup.Item>
-          <ListGroup.Item>{this.state.phone}</ListGroup.Item>
-          <ListGroup.Item>{this.state.jobTitle}</ListGroup.Item>
-          <ListGroup.Item>{this.state.yearsWithCompany}</ListGroup.Item>
-        </ListGroup>
-      </div>
-    );
-  }
+function SearchResults(props) {
+  return (
+    <ul className="list-group list-group-horiztonal">
+      {props.results.map(result => (
+        <li key={result} className="list-group-item">
+          <h4>{result.firstName}</h4>
+          <h4>{result.lastName}</h4>
+          <h4>{result.phoneNumber}</h4>
+          <h4>{result.email}</h4>
+        </li>
+        
+      ))}
+    </ul>
+  );
 }
-export default serachResult
+
+export default SearchResults;
+
+

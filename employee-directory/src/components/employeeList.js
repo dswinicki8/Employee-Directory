@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
 
-export default function employeeList() {
+function EmployeeList(props) {
   return (
-    <div>
-      
-    </div>
-  )
+    <table className="table">
+      {props.results.map((result) => (
+        <table>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Corey</td>
+            <td>Taylor</td>
+            <td>46</td>
+          </tr>
+        </table>
+      ))}
+    </table>
+  );
 }
+
+export default EmployeeList;
